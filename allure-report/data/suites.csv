@@ -1,0 +1,5 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","1558","Store the screenshot","","2026-11-18","failed","2026-11-18","","screenShot.spec.js","",""
+"","2202","page playwright test","","2026-11-18","passed","2026-11-18","","UIBasictest.spec.js","",""
+"","5116","browser context Playwright test","","2026-11-18","passed","2026-11-18","","UIBasictest.spec.js","",""
+"","3230","Screenshot & Visual comparision","","2026-11-18","passed","2026-11-18","","screenShot.spec.js","",""

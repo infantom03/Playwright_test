@@ -24,7 +24,6 @@ test('child window handle', async ({ browser }) => {
     console.log(finalText);
 
     await userName.fill(finalText);
-    await page.pause();
     console.log( await userName.inputValue());
 
 })

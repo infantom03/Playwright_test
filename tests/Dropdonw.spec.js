@@ -30,6 +30,4 @@ test('Drop donw', async ({ page }) => {
 
     await expect(documentLink).toHaveAttribute("class", "blinkingText");
     documentLink.click();
-    await page.pause();
-
 })

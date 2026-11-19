@@ -7,8 +7,8 @@ test("launch the browser", async ({ page }) => {
 
     // Example of Getby Locator
 
-    page.getByRole('button', { 'name': 'Login' });
-    page.getByText('Add to Card', { expect: true }).click();
+    page.getByRole('button', { name: 'Login' });
+    page.getByText('Add to Cart', { expect: true }).click();
 
 
     // How to donwload the file
@@ -16,7 +16,7 @@ test("launch the browser", async ({ page }) => {
     await page.goto("https://www.httrack.com/");
     await page.getByText('download section').click();
     const downloadPromise = page.waitForEvent('download');
-    await page.pause();
+
     await page.getByText('httrack_x64-3.50.5.exe').click();
     const download = await downloadPromise;
     await download.saveAs('downloads/file.pdf');

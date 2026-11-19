@@ -17,7 +17,7 @@ test('New test', async ({ page }) => {
 
 })
 
-test.only('My own test', async ({ page }) => {
+test('My own test', async ({ page }) => {
     await page.goto("https://rahulshettyacademy.com/client/#/auth/login")
 
     const email = page.locator("#userEmail");

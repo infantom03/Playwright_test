@@ -1,5 +1,5 @@
 const { test, expect, request } = require('@playwright/test')
-const { customtest } = require("./utils/Fixture.js")
+const { customtest } = require('../utils/Fixture.js');
 
 
 

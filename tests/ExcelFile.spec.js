@@ -41,7 +41,7 @@ test('Upload download excel validation', async ({ page }) => {
   const download = page.waitForEvent('download');
   await page.getByRole('button', { name: 'Download' }).click();
   const dl = await download;
-  const filePath = 'C:/Users/Zino/Downloads/ExcelJs.xlsx '; // or await dl.path()
+  const filePath = 'C:/Users/Zino/Downloads/ExcelJs.xlsx'; // or await dl.path()
  
   // ✅ Ensure the edit finishes before upload
   await writeExcelTest(textSearch, updateValue, { rowChange: 0, colChange: 2 }, filePath);

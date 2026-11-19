@@ -1,5 +1,5 @@
 const { test, request, expect } = require('@playwright/test');
-const { APIutils } = require('./utils/APIutils.js');
+const { APIutils } = require('../utils/APIutils');
 const loginPayload = { userEmail: "infantom.sabadotechnologies@gmail.com", userPassword: "Hello@123" };
 const orderPayLoad = { orders: [{ country: "Cuba", productOrderedId: "6960eac0c941646b7a8b3e68" }] };
 const fakePayloadOrder = { data: [], message: "No Orders" }
@@ -12,7 +12,7 @@ test.beforeAll(async () => {
 
     const apiContext = await request.newContext();
     const apiUtils = new APIutils(apiContext, loginPayload);
-    responce = await apiUtils.createOrder(orderPayLoad);
+    response = await apiUtils.createOrder(orderPayLoad);
 
 })
 
@@ -29,8 +29,8 @@ test('@SP Place the order', async ({ page }) => {
     await page.route("https://rahulshettyacademy.com/api/ecom/order/get-orders-for-customer/*",
         async route => {
             const response = await page.request.fetch(route.request());
-            let body = JSON.stringify(fakePayLoadOrders);
-            route.fulfill(
+            let body = JSON.stringify(fakePayloadOrder );
+             await  route.fulfill(
                 {
                     response,
                     body,

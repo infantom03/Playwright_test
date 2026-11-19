@@ -8,8 +8,7 @@ const orderPayload = { orders: [{ country: "Cuba", productOrderedId: "6960eac0c9
 
 exports.customtest = base.test.extend(
     {
-        AuthenticatedPage: async ({ browser }, use) => 
-        {
+        AuthenticatedPage: async ({ browser }, use) => {
             const context = await browser.newContext();
             const page = await context.newPage();
             await page.goto("https://rahulshettyacademy.com/client/#/auth/login");
@@ -20,14 +19,13 @@ exports.customtest = base.test.extend(
             await use(page);
         },
 
-        createOrder1: async ({ }, use) => 
-        {
+        createOrder1: async ({ }, use) => {
             const apiContext = await request.newContext();
             const apiUtils = new APIutils(apiContext, loginPayload);
-            const  response = await apiUtils.createOrder(orderPayload);
+            const response = await apiUtils.createOrder(orderPayload);
             await use(response);
 
-        }
+        },
     }
 
 )

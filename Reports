@@ -1,0 +1,7 @@
+/*
+
+1. To install the Allure    - npm install -g allure-commandline
+2. To Execute superate test - &particularTest& --reporter=line,allure-playwright
+3.  To open the allure       - allure open ./allure-report
+
+*/

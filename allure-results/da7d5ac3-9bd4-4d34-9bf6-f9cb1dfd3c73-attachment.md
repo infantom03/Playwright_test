@@ -1,0 +1,185 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: screenShot.spec.js >> Store the screenshot
+- Location: tests\screenShot.spec.js:28:1
+
+# Error details
+
+```
+Error: expect(page).toHaveScreenshot(expected) failed
+
+  24604 pixels (ratio 0.03 of all image pixels) are different.
+
+  Snapshot: Login.png
+
+Call log:
+  - Expect "toHaveScreenshot(Login.png)" with timeout 5000ms
+    - verifying given screenshot expectation
+  - taking page screenshot
+    - disabled all CSS animations
+  - waiting for fonts to load...
+  - fonts loaded
+  - 1017 pixels (ratio 0.01 of all image pixels) are different.
+  - waiting 100ms before taking screenshot
+  - taking page screenshot
+    - disabled all CSS animations
+  - waiting for fonts to load...
+  - fonts loaded
+  - 23587 pixels (ratio 0.03 of all image pixels) are different.
+  - waiting 250ms before taking screenshot
+  - taking page screenshot
+    - disabled all CSS animations
+  - waiting for fonts to load...
+  - fonts loaded
+  - captured a stable screenshot
+  - 24604 pixels (ratio 0.03 of all image pixels) are different.
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - navigation [ref=e3]:
+    - link "About" [ref=e4] [cursor=pointer]:
+      - /url: https://about.google/?fg=1&utm_source=google-IN&utm_medium=referral&utm_campaign=hp-header
+    - link "Store" [ref=e5] [cursor=pointer]:
+      - /url: https://store.google.com/IN?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-IN
+    - generic [ref=e7]:
+      - generic [ref=e8]:
+        - link "Gmail" [ref=e10] [cursor=pointer]:
+          - /url: https://mail.google.com/mail/&ogbl
+        - link "Search for Images" [ref=e12] [cursor=pointer]:
+          - /url: https://www.google.com/imghp?hl=en&ogbl
+          - text: Images
+      - button "Google apps" [ref=e15] [cursor=pointer]
+      - link "Sign in" [ref=e20] [cursor=pointer]:
+        - /url: https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/&ec=futura_exp_og_so_72776762_e
+  - img "Google" [ref=e23]
+  - search [ref=e31]:
+    - generic [ref=e33]:
+      - generic [ref=e35]:
+        - button "Add files, tools, and select a model" [ref=e41] [cursor=pointer]
+        - combobox "Search" [ref=e46]
+        - generic [ref=e47]:
+          - generic [ref=e48]:
+            - button "Search by voice" [ref=e51] [cursor=pointer]
+            - button "Search by image" [ref=e56] [cursor=pointer]
+          - link "AI Mode" [ref=e59] [cursor=pointer]
+      - generic [ref=e67]:
+        - button "Google Search" [ref=e68] [cursor=pointer]
+        - button "I'm Feeling Lucky" [ref=e69] [cursor=pointer]
+  - generic [ref=e70]:
+    - generic:
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - dialog "Choose Chrome, the browser built by Google":
+                      - generic [ref=e80]:
+                        - generic [ref=e81]:
+                          - heading "Choose Chrome, the browser built by Google" [level=2] [ref=e82]
+                          - generic [ref=e83]: Try a fast, secure browser with automatic updates
+                        - generic [ref=e84]:
+                          - button "Do not use Chrome" [ref=e85] [cursor=pointer]
+                          - button "Download Chrome" [ref=e88] [cursor=pointer]
+                        - generic [ref=e97]:
+                          - generic [ref=e98]:
+                            - text: By downloading Chrome, you agree to the
+                            - link "Google Terms of Service" [ref=e99] [cursor=pointer]:
+                              - /url: https://policies.google.com/terms
+                            - text: and
+                            - link "Chrome and ChromeOS Additional Terms of Service" [ref=e100] [cursor=pointer]:
+                              - /url: https://www.google.com/chrome/terms/
+                            - text: .
+                          - generic [ref=e102]:
+                            - checkbox "Help make Google Chrome better by automatically sending usage statistics and crash reports to Google. Learn more about automatic reports." [checked] [ref=e103]
+                            - generic [ref=e104]:
+                              - text: Help make Google Chrome better by automatically sending usage statistics and crash reports to Google.
+                              - link "Learn more about automatic reports" [ref=e105] [cursor=pointer]:
+                                - /url: https://support.google.com/chrome/answer/96817
+                              - text: .
+    - generic [ref=e107]:
+      - text: "Google offered in:"
+      - link "हिन्दी" [ref=e108] [cursor=pointer]:
+        - /url: https://www.google.com/setprefs?sig=0_E1I9mdnau5Ozv1I4NMVTmTarROM%3D&hl=hi&source=homepage&sa=X&ved=2ahUKEwiYr5r9wZGYAxWERmwGHR2ROVgQ2ZgBegQIABAn
+      - link "বাংলা" [ref=e109] [cursor=pointer]:
+        - /url: https://www.google.com/setprefs?sig=0_E1I9mdnau5Ozv1I4NMVTmTarROM%3D&hl=bn&source=homepage&sa=X&ved=2ahUKEwiYr5r9wZGYAxWERmwGHR2ROVgQ2ZgBegQIABAo
+      - link "తెలుగు" [ref=e110] [cursor=pointer]:
+        - /url: https://www.google.com/setprefs?sig=0_E1I9mdnau5Ozv1I4NMVTmTarROM%3D&hl=te&source=homepage&sa=X&ved=2ahUKEwiYr5r9wZGYAxWERmwGHR2ROVgQ2ZgBegQIABAp
+      - link "मराठी" [ref=e111] [cursor=pointer]:
+        - /url: https://www.google.com/setprefs?sig=0_E1I9mdnau5Ozv1I4NMVTmTarROM%3D&hl=mr&source=homepage&sa=X&ved=2ahUKEwiYr5r9wZGYAxWERmwGHR2ROVgQ2ZgBegQIABAq
+      - link "தமிழ்" [ref=e112] [cursor=pointer]:
+        - /url: https://www.google.com/setprefs?sig=0_E1I9mdnau5Ozv1I4NMVTmTarROM%3D&hl=ta&source=homepage&sa=X&ved=2ahUKEwiYr5r9wZGYAxWERmwGHR2ROVgQ2ZgBegQIABAr
+      - link "ગુજરાતી" [ref=e113] [cursor=pointer]:
+        - /url: https://www.google.com/setprefs?sig=0_E1I9mdnau5Ozv1I4NMVTmTarROM%3D&hl=gu&source=homepage&sa=X&ved=2ahUKEwiYr5r9wZGYAxWERmwGHR2ROVgQ2ZgBegQIABAs
+      - link "ಕನ್ನಡ" [ref=e114] [cursor=pointer]:
+        - /url: https://www.google.com/setprefs?sig=0_E1I9mdnau5Ozv1I4NMVTmTarROM%3D&hl=kn&source=homepage&sa=X&ved=2ahUKEwiYr5r9wZGYAxWERmwGHR2ROVgQ2ZgBegQIABAt
+      - link "മലയാളം" [ref=e115] [cursor=pointer]:
+        - /url: https://www.google.com/setprefs?sig=0_E1I9mdnau5Ozv1I4NMVTmTarROM%3D&hl=ml&source=homepage&sa=X&ved=2ahUKEwiYr5r9wZGYAxWERmwGHR2ROVgQ2ZgBegQIABAu
+      - link "ਪੰਜਾਬੀ" [ref=e116] [cursor=pointer]:
+        - /url: https://www.google.com/setprefs?sig=0_E1I9mdnau5Ozv1I4NMVTmTarROM%3D&hl=pa&source=homepage&sa=X&ved=2ahUKEwiYr5r9wZGYAxWERmwGHR2ROVgQ2ZgBegQIABAv
+  - contentinfo [ref=e118]:
+    - generic [ref=e119]: India
+    - generic [ref=e120]:
+      - generic [ref=e121]:
+        - link "Advertising" [ref=e122] [cursor=pointer]:
+          - /url: https://www.google.com/intl/en_in/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1
+        - link "Business" [ref=e123] [cursor=pointer]:
+          - /url: https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1
+        - link "How Search works" [ref=e124] [cursor=pointer]:
+          - /url: https://google.com/search/howsearchworks/?fg=1
+      - generic [ref=e125]:
+        - link "Privacy" [ref=e126] [cursor=pointer]:
+          - /url: https://policies.google.com/privacy?hl=en-IN&fg=1
+        - link "Terms" [ref=e127] [cursor=pointer]:
+          - /url: https://policies.google.com/terms?hl=en-IN&fg=1
+        - button "Settings" [ref=e131] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  1  | const { test, expect } = require('@playwright/test')
+  2  | 
+  3  | 
+  4  | // test.describe.configure({ mode: 'parallel' });  // To Run this test in the parallel mode 
+  5  | // test.describe.configure({ mode: 'serial'});     // TO Run this in the Serial mood if any test faile 
+  6  | 
+  7  | test("Screenshot & Visual comparision", async ({ page }) => {
+  8  | 
+  9  |     await page.goto("https://rahulshettyacademy.com/AutomationPractice/")
+  10 |     await expect(page.locator("#displayed-text")).toBeVisible();
+  11 | 
+  12 |     //only the element sreenshot
+  13 |     await page.locator("#displayed-text").screenshot({ path: 'partialScreen.png', timeout: 15000 });
+  14 | 
+  15 |     await page.locator("#hide-textbox").click();
+  16 | 
+  17 |     //Tack full page screenshot 
+  18 |     await page.screenshot({ path: 'Screenshot.png' });
+  19 | 
+  20 |     await expect(page.locator("#displayed-text")).toBeHidden();
+  21 | 
+  22 | 
+  23 |     //screenshot store compare the new screenshot with old one
+  24 | 
+  25 | 
+  26 | })
+  27 | 
+  28 | test("Store the screenshot", async ({ page }) => {
+  29 |     await page.goto("https://www.google.com/");
+> 30 |      await expect(page).toHaveScreenshot('Login.png');
+     |                         ^ Error: expect(page).toHaveScreenshot(expected) failed
+  31 |    // expect(await page.screenshot()).toMatchSnapshot('Login.png')    // When you run this first time it will faile beacuse Login.png not there it will faile same time it will take the snap of login page when you run this in second time it will store the snap of it then it will compare the two screenshot.
+  32 | })
+```

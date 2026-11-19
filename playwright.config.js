@@ -8,6 +8,7 @@ import { defineConfig, devices } from '@playwright/test';
  */
 module.exports = defineConfig({
   testDir: './tests',
+  retries: 1,
   timeout: 10 * 5000,
 
   expect: {
@@ -25,7 +26,7 @@ module.exports = defineConfig({
     browserName: 'chromium',
     headless: false,
     screenshot: 'on',
-    trace : 'retain-on-failure'
+    trace : 'on',//only-on-failure'
   },
 
 });

@@ -1,8 +1,8 @@
 const { test, request, expect } = require('@playwright/test');
-const { APIutils } = require('./utils/APIutils.js');
+const { APIutils } = require('../utils/APIutils');
 const loginPayload = { userEmail: "infantom.sabadotechnologies@gmail.com", userPassword: "Hello@123" };
 const orderPayload = { orders: [{ country: "Cuba", productOrderedId: "6960eac0c941646b7a8b3e68" }] };
-let responce;
+let response;
 
 
 test.beforeAll(async () => {
@@ -21,7 +21,7 @@ test("@ API TEST PLACE THE ORDER", async ({ page }) => {
 
     await page.addInitScript(value => {
         window.localStorage.setItem('token', value);
-    }, responce.token);
+    }, response.token);
     //-----------------------------------------
 
 
@@ -36,13 +36,12 @@ test("@ API TEST PLACE THE ORDER", async ({ page }) => {
 
     for (let i = 0; i < await orderRow.count(); i++) {
         const orderIDvaludes = await orderRow.nth(i).locator("th").textContent();
-        if (responce.orderID.includes(orderIDvaludes)) {
+        if (response.orderId.includes(orderIDvaludes)) {
             await orderRow.nth(i).locator("button").first().click();
             break;
         }
     }
 
     const orderIDdetails = await page.locator(".col-text").first().textContent();
-    await page.pause();
-    expect(responce.orderID.includes(orderIDdetails)).toBeTruthy();
+    expect(response.orderId.includes(orderIDdetails)).toBeTruthy();
 });
