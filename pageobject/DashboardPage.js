@@ -9,7 +9,7 @@ class DashboardPage
         this.order = page.locator("button[routerlink*='myorders']")
     }
 
-    async searchProduct(productName)
+    async searchProduct( productName)
     {
         await this.products.first().waitFor({ state : 'visible'});
         const titles = await this.productText.allTextContents();

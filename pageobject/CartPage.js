@@ -6,7 +6,7 @@ class CartPage
     {
         this.page = page;
         this.checoutbtn = page.getByRole('button', { name: 'Checkout' });
-        this.cartProduct = page.locator("div li").first();
+        this.cartProduct = page.locator("div li h3").first();
         this. productText =  page.locator(".card-body b")
         this.cart = page.locator("[routerlink*='cart']")
         this.ordersbtn = page.locator("button[routerlink*='myorders']")
