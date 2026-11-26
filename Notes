@@ -36,11 +36,36 @@
 1. Run this commandline "npm install @cucumber/cucumber" installed the package
 2. Install the plugin like extention "cucumber(Gherkin)"
 
+*/ 
 
-*/ parameterization, parllel, html report, rerun faild test
+
+/*parameterization, parllel, html report, rerun faild test
+1. Scenario Outline : which means this test gonna execute multiple time
+2. npx cucumber-js features/Ecommerce.feature --parallel 2   - execute the feature file parllelly 
+3. Examples:
+      | userName           | passWord       |
+      | rahulshettyacademy | Learning@830$3mK2 |
+      | Hello@123          | Test123        | 
+      parameterization to execute with multiple set of data alosng with 1st point
+4. HTML Report - --format html:cucumber r-report.html  
+5. Return Test case - --retry 1 (npx cucumber-js --tags "@regression" --ertry 1 )
+6. Tags - "@regression"
+*/
 
 
-/*
+
+
+/* ---------------- DEVOPS   __ QAOPS --------------------------
+1. Subscript to the Azure Devops 
+2. playwright workspace 
 
 
 */
+
+
+
+
+
+
+
+
