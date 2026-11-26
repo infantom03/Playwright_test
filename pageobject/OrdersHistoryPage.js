@@ -1,3 +1,4 @@
+//Author: Infantom
 class OrdersHistoryPage
 {
 constructor(page)

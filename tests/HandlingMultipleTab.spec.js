@@ -1,3 +1,4 @@
+//Author: Infantom
 const { test } = require('@playwright/test');
 const { promises } = require('node:dns');
 

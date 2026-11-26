@@ -1,3 +1,4 @@
+//Author: Infantom
 const { test, expect } = require('@playwright/test');
 const { time } = require('node:console');
 
